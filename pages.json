@@ -1,0 +1,60 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "uni-ui基础项目"
+		}
+	},{
+		"path": "pages/tabbar/index",
+		"style": {
+			"navigationBarTitleText": ""
+		}
+	},{
+		"path": "pages/tabbar/myOrder",
+		"style": {
+			"navigationBarTitleText": ""
+		}
+	},{
+		"path": "pages/tabbar/me",
+		"style": {
+			"navigationBarTitleText": ""
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F5F5F5",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar":{
+		"color":"#999999",
+		"selectedColor":"#ffba59",
+		"borderStyle":"#999",
+		"backgroundColor":"#F5F5F5",
+		"height":"50px",
+		"fontSize":"10px",
+		"iconWidth":"24px",
+		"spacing":"3px",
+		"list":[{
+			"pagePath":"pages/tabbar/index",
+			"iconPath":"static/plant02.png",
+			"selectedIconPath":"static/plant02.png",
+			"text":"首页"
+			
+		},{
+			"pagePath":"pages/tabbar/myOrder",
+			"iconPath":"static/plant02.png",
+			"selectedIconPath":"static/plant02.png",
+			"text":"订单"
+			
+		},{
+			"pagePath":"pages/tabbar/me",
+			"iconPath":"static/plant02.png",
+			"selectedIconPath":"static/plant02.png",
+			"text":"我的"
+			
+		}
+		]
+	}
+}
