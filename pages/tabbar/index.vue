@@ -29,7 +29,7 @@
 				<view class="btn_text">菜品评价</view>
 			</view>
 		</view>
-		<view class="btn_view">
+		<view class="btn_view btn_view1">
 			<view class="btn" @click="goClick('../data/manageData')">
 				<view class="icons_view icons_view6"><span class="iconfont icon-tixianjilu icons"></span></view>
 				<view class="btn_text">经营数据</view>
@@ -97,6 +97,9 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
+	}
+	.btn_view1{
+		justify-content: space-around;
 	}
 	.icons_view1{
 		background:linear-gradient(0deg,rgba(244,74,111,1) 0%,rgba(240,141,141,1) 100%);
