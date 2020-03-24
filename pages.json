@@ -5,19 +5,64 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
-	},{
-		"path": "pages/tabbar/myOrder",
+	},
+	{
+		"path": "pages/order/dishesData",
 		"style": {
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
-	},{
-		"path": "pages/tabbar/me",
+	},
+	{
+		"path": "pages/order/orderProcessing",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/cabinet/cabinet",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/commodity/commodityAdd",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/commodity/menuAdd",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/commodity/commodityComment",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/data/manageData",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
+	},
+	{
+		"path": "pages/notice/notice",
 		"style": {
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
 	}
+	
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
