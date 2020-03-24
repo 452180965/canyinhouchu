@@ -1,10 +1,8 @@
 <template>
 	<view class="page">
-		<view class="welcome">欢迎来到（第五中学）智能食堂</view>
-		<view class="top_view">
-			<view class="img_view"><image class="top_img" src="../../static/plant01.png" mode=""></image></view>
-			<view class="address_view">
-			</view>
+		<view style="font-size: 0;"><image class="index_img" src="/static/index_bg.png" mode="aspectFill"></image></view>
+		<view class="btn_view">
+			
 		</view>
 	</view>
 </template>
@@ -28,16 +26,10 @@
 	page{
 		background: #FFFFFF;
 	}
-	.welcome{
+	
+	.index_img{
 		width: 100%;
-		text-align: center;
-		font-size: 32upx;
-	}
-	.img_view{
-		font-size: 0;
-	}
-	.top_img{
-		width: 30upx;
-		height: 40upx;
+		height: 319upx;
+		
 	}
 </style>
