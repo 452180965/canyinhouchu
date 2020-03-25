@@ -1,5 +1,5 @@
 @font-face {font-family: "iconfont";
-  src: url('/static/iconfont.ttf?t=1585058217249') format('truetype'); /* iOS 4.1- */
+  src: url('/static/iconfont.ttf?t=1585123960335') format('truetype'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -8,6 +8,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon:before {
+  content: "\e61e";
+}
+
+.icon-wancan:before {
+  content: "\e6a5";
+}
+
+.icon-yexiao:before {
+  content: "\e6ae";
+}
+
+.icon-wucan:before {
+  content: "\e6bb";
+}
+
+.icon-jiantou:before {
+  content: "\e610";
+}
+
+.icon-beifen-xiaotubiao_food-mifan:before {
+  content: "\e65d";
+}
+
+.icon-beifen-xiaotubiao_food-hanbaobao:before {
+  content: "\e65e";
+}
+
+.icon-beifen-xiaotubiao_food-tiantianquan:before {
+  content: "\e65f";
+}
+
+.icon-beifen-xiaotubiao_food-mianbao:before {
+  content: "\e660";
+}
+
+.icon-zhiding:before {
+  content: "\e63f";
+}
+
+.icon-yemian:before {
+  content: "\e600";
+}
+
+.icon-sousuo:before {
+  content: "\e643";
 }
 
 .icon-fuwushangruwangsvg:before {
@@ -40,85 +88,5 @@
 
 .icon-wodedingdan:before {
   content: "\e62e";
-}
-
-.icon-wenjian:before {
-  content: "\e607";
-}
-
-.icon-xiangji:before {
-  content: "\e608";
-}
-
-.icon-biaoge:before {
-  content: "\e609";
-}
-
-.icon-wendang:before {
-  content: "\e60a";
-}
-
-.icon-shuqian:before {
-  content: "\e60b";
-}
-
-.icon-gechi:before {
-  content: "\e60c";
-}
-
-.icon-guanzhu:before {
-  content: "\e60d";
-}
-
-.icon-shanchu:before {
-  content: "\e60e";
-}
-
-.icon-youxiang:before {
-  content: "\e60f";
-}
-
-.icon-shipin:before {
-  content: "\e610";
-}
-
-.icon-zhaopian:before {
-  content: "\e611";
-}
-
-.icon-xingxing:before {
-  content: "\e612";
-}
-
-.icon-yingshi:before {
-  content: "\e613";
-}
-
-.icon-liwu:before {
-  content: "\e614";
-}
-
-.icon-caidan:before {
-  content: "\e615";
-}
-
-.icon-bianqian:before {
-  content: "\e616";
-}
-
-.icon-gouwuche:before {
-  content: "\e617";
-}
-
-.icon-fanhui:before {
-  content: "\e618";
-}
-
-.icon-gaishuai:before {
-  content: "\e619";
-}
-
-.icon-fahuo:before {
-  content: "\e61a";
 }
 

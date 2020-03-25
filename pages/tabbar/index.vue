@@ -122,6 +122,9 @@
 	.icons_view7{
 		background: linear-gradient(90deg,rgba(124,141,254,1) 0%, rgba(83,97,238,1) 100%);
 	}
+	.icons_view8{
+		background: linear-gradient(0deg,rgba(57,56,62,1) 0% ,rgba(2,2,4,1) 100%);
+	}
 	.btn_text{
 		font-size: 24upx;
 		line-height: 1;
