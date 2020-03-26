@@ -10,6 +10,17 @@
 					<view class="scroll3" v-for="(item,index1) in classifyList" :key='index1'>{{item}}</view>
 				</scroll-view>
 		</view>
+		<view class="bottom_view">
+			<view class="bottom_tab">
+				<span class="iconfont icon-fenlei"></span><text>管理分类</text>
+			</view>
+			<view class="bottom_tab">
+				<span class="iconfont icon-paixu"></span><text>排序</text>
+			</view>
+			<view class="bottom_tab">
+				<span class="iconfont icon-xinjian"></span><text>新建商品</text>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -78,5 +89,12 @@
 		height: 320upx;
 		background: #FFFFFF;
 		border-bottom: 10upx solid #F5F5F5;
+	}
+	.bottom_view{
+		position: fixed;
+		bottom: 0;
+		height: 88upx;
+		width: 100%;
+		
 	}
 </style>

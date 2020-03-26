@@ -1,5 +1,5 @@
 @font-face {font-family: "iconfont";
-  src: url('/static/iconfont.ttf?t=1585213939243') format('truetype'); /* iOS 4.1- */
+  src: url('/static/iconfont.ttf?t=1585240025109') format('truetype'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -8,6 +8,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenlei:before {
+  content: "\e611";
+}
+
+.icon-paixu:before {
+  content: "\e602";
+}
+
+.icon-xinjian:before {
+  content: "\e67a";
 }
 
 .icon-dayinji:before {
