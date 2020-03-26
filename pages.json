@@ -61,6 +61,13 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
+	},
+	{
+		"path": "pages/order/orderDetail/orderDetail",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
 	}
 	
 	],

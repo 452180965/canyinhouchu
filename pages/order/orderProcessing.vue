@@ -17,7 +17,7 @@
 		<view class="table_view">
 			<view class="top_view" :style="{background:colorList[colorType]}">
 				<view class="title">{{titles}}</view>
-				<view class="detail_text">详情</view>
+				<view class="detail_text" @click="detailClick">详情</view>
 			</view>
 			<view class="table">
 				<view class="table_left">
@@ -106,8 +106,11 @@
 				}else{
 					this.colorType = 0
 				}
-				
-				
+			},
+			detailClick(){
+				uni.navigateTo({
+					url:"orderDetail/orderDetail"
+				})
 			},
 		}
 	}
@@ -302,5 +305,14 @@
 		bottom: 0;
 		left: 0;
 		box-shadow: 0 -10upx 20upx rgba(0,0,0,0.1);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.bottom_tab{
+		width: 50%;
+		text-align: center;
+		font-size: 28upx;
+		border-right: 2upx solid #F5F5F5;
 	}
 </style>
