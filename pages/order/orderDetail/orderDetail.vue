@@ -10,12 +10,32 @@
 			</view>
 		</view>
 		<view class="time_view time_view1">
-			<view class="time_text">
-				柜子筛选:
+			<view style="display: flex;align-items: center;">
+				<view class="time_text">
+					柜子筛选:
+				</view>
+				<view class="picker">
+					<picker mode="selector" :range="array" @change="pickerClick" @cancel="cancelClick">
+						<view>{{arrayText}} </view>
+					</picker>
+					<span class="iconfont icon-jiantou1"></span>
+				</view>
 			</view>
-			<picker mode="selector" :range="array" @change="pickerClick" @cancel="cancelClick">
-				<view>{{arrayText}} </view>
-			</picker>
+			<view class="search_btn">查询</view>
+		</view>
+		<view class="table_view">
+			<view class="table_left_view">
+				<view class="table">序号</view>
+				<view class="table" v-for="(item,index) in table" :key="index">{{item.id}}</view>
+			</view>
+			<view class="table_center_view">
+				<view class="table">菜品名称</view>
+				<view class="table" v-for="(item,index1) in table" :key="index1">{{item.name}}</view>
+			</view>
+			<view class="table_right_view">
+				<view class="table">份数</view>
+				<view class="table" v-for="(item,index2) in table" :key="index2">{{item.type}}</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -26,12 +46,37 @@
 		components: {
 			navbar
 		},
-		data(){
-			return{
-				array:['1','2'],
-				arrayText:'1'
+		data() {
+			return {
+				array: ['1', '2'],
+				arrayText: '1',
+				table: [{
+						id: '1',
+						name: 'dd',
+						type: '3'
+					},
+					{
+						id: '1',
+						name: 'dd',
+						type: '3'
+					},
+					{
+						id: '1',
+						name: 'dd',
+						type: '3'
+					}
+				]
 			}
 		},
+		onLoad() {
+
+		},
+		methods: {
+			pickerClick(e) {
+				console.log(e)
+				this.arrayText = this.array[e.detail.value]
+			},
+		}
 	}
 </script>
 
@@ -50,6 +95,8 @@
 
 	.time_view1 {
 		padding-top: 40upx;
+		justify-content: space-between;
+		width: 70%;
 	}
 
 	.time_input_view {
@@ -71,7 +118,70 @@
 		text-align: center;
 		margin: 0 20upx;
 	}
-	picker{
+
+	.picker {
+		height: 60upx;
 		margin-left: 20upx;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 160upx;
+		padding: 0 10upx 0 20upx;
+		box-sizing: border-box;
+		border: 1upx solid #999;
+		color: #333333;
+		font-size: 28upx
+	}
+
+	.icon-jiantou1 {
+		font-size: 28upx;
+		color: #999;
+		margin-top: 6upx;
+	}
+
+	.search_btn {
+		font-size: 32upx;
+		color: #FFFFFF;
+		padding: 10upx 20upx;
+		border-radius: 10upx;
+		background: #FFBA59;
+	}
+
+	/* 表格 */
+	.table_view {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 710upx;
+		margin: 40upx auto 0;
+		background: #F5F5F5;
+	}
+
+	.table_left_view {
+		width: 15%;
+		border-right: 1upx solid #999;
+	}
+
+	.table_center_view {
+		width: 60%;
+	}
+
+	.table_right_view {
+		width: 25%;
+		border-left: 1upx solid #999999;
+	}
+
+	.table {
+		width: 100%;
+		height: 68upx;
+		text-align: center;
+		line-height: 68upx;
+		font-size: 32upx;
+		color: #333333;
+	}
+
+	.table:nth-last-of-type(2n) {
+		background: #c5c5c5;
 	}
 </style>

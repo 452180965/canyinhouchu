@@ -1,5 +1,5 @@
 @font-face {font-family: "iconfont";
-  src: url('/static/iconfont.ttf?t=1585123960335') format('truetype'); /* iOS 4.1- */
+  src: url('/static/iconfont.ttf?t=1585213939243') format('truetype'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -8,6 +8,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dayinji:before {
+  content: "\e76d";
+}
+
+.icon-jiantou1:before {
+  content: "\e64b";
 }
 
 .icon-icon:before {

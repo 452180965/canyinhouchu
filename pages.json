@@ -68,6 +68,13 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
+	},
+	{
+		"path": "pages/order/orderDetail/todayOrder",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
 	}
 	
 	],
