@@ -1,26 +1,31 @@
 <template>
 	<view class="page">
 		<navbar title="商品管理" :backcolorType='2' :showKongPanel="true" :whiteback='2'></navbar>
-
 		<view class="big_view">
 			<scroll-view class="scrollY" scroll-y="true" :style="{height: tabHeight + 'px'}">
 				<view class="scroll1" v-for="(item,index) in classifyList" :key='index' :class="index==indexs?'scroll2':''" @click="classifyClick(index)">{{item}}</view>
 			</scroll-view>
 			<scroll-view class="scrollX" scroll-y="true" :style="{height: tabHeight + 'px'}">
 				<view class="commodity_view">
-					<view class="commodity_img_view"><image class="commodity_img" src="/static/微信图片_20200318092008.jpg"></image></view>
-					<view class="commodity_name_view">
-						<view class="commodity_name">菜名</view>
+					<view class="commodity_view_left">
+						<view class="commodity_img_view"><image class="commodity_img" src="/static/微信图片_20200318092008.jpg"></image></view>
+						<view class="commodity_name_view">
+							<view class="commodity_name">菜名</view>
+							<view class="commodity_num">月售 100</view>
+							<view class="commodity_cash">￥10</view>
+						</view>
+					</view>
+					<view class="commodity_btn_view">
+						<view class="commodity_btn">编辑</view>
+						<view class="commodity_btn">库存</view>
+						<view class="commodity_btn commodity_btn1">下架</view>
 					</view>
 				</view>
 			</scroll-view>
 		</view>
 		<view class="bottom_view">
-			<view class="bottom_tab">
+			<view class="bottom_tab" @click="classifyClick">
 				<span class="iconfont icon-fenlei"></span><text>管理分类</text>
-			</view>
-			<view class="bottom_tab">
-				<span class="iconfont icon-paixu"></span><text>排序</text>
 			</view>
 			<view class="bottom_tab">
 				<span class="iconfont icon-xinjian"></span><text>新建商品</text>
@@ -56,7 +61,11 @@
 
 		},
 		methods: {
-
+			classifyClick(){
+				uni.navigateTo({
+					url:"administration/classify"
+				})
+			},
 		}
 	}
 </script>
@@ -119,7 +128,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 33.33%;
+		width: 50%;
 		line-height: 78upx;
 		border-right: 4upx solid #F5F5F5;
 	}
@@ -144,5 +153,65 @@
 	.icon-xinjian {
 		font-size: 30upx;
 		color: #333333;
+	}
+	/* 商品 */
+	.commodity_view{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		padding: 20upx 14upx;
+		box-sizing: border-box;
+		background: #FFFFFF;
+	}
+	.commodity_view_left{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.commodity_img_view{
+		font-size: 0;
+	}
+	.commodity_img{
+		width: 160upx;
+		height: 160upx;
+		border-radius: 14upx;
+	}
+	.commodity_name_view{
+		font-size: 26upx;
+		line-height: 1;
+		color: #333333;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 140upx;
+		padding: 10upx 0;
+		box-sizing: border-box;
+		padding-left: 20upx;
+	}
+	.commodity_name{
+		font-size: 32upx;
+		font-weight: 500;
+	}
+	.commodity_btn_view{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 160upx;
+	}
+	.commodity_btn{
+		font-size: 24upx;
+		line-height: 38upx;
+		height: 38upx;
+		text-align: center;
+		width: 120upx;
+		color: #fff;
+		background:linear-gradient(270deg,rgba(255,55,78,1) 1%,rgba(255,186,89,1) 100%);
+		border-radius: 34upx;
+	}
+	.commodity_btn1{
+		background: #f5f5f5;
+		color: #666;
 	}
 </style>

@@ -143,9 +143,9 @@
 	.search_btn {
 		font-size: 32upx;
 		color: #FFFFFF;
-		padding: 10upx 20upx;
-		border-radius: 10upx;
-		background: #FFBA59;
+		padding: 10upx 24upx;
+		border-radius: 34upx;
+		background:linear-gradient(270deg,rgba(249,128,80,1) 1%,rgba(255,186,89,1) 100%);
 	}
 
 	/* 表格 */

@@ -51,9 +51,9 @@
 	.printing_btn{
 		font-size: 28upx;
 		color: #fff;
-		border-radius: 14upx;
-		padding: 10upx 20upx;
-		background: #FFBA59;
+		border-radius: 34upx;
+		padding: 10upx 24upx;
+		background:linear-gradient(270deg,rgba(249,128,80,1) 1%,rgba(255,186,89,1) 100%);
 		margin-left: 40upx;
 	}
 	.icon-dayinji{

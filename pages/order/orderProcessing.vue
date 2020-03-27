@@ -160,7 +160,7 @@
 		width: 120upx;
 		height: 68upx;
 		border-radius: 34upx;
-		background: #ffba59;
+		background:linear-gradient(270deg,rgba(249,128,80,1) 1%,rgba(255,186,89,1) 100%);
 		text-align: center;
 		line-height: 68upx;
 	}
