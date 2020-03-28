@@ -82,6 +82,13 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
+	},
+	{
+		"path": "pages/commodity/administration/addDetail",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
 	}
 	
 	],

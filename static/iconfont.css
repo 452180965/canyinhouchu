@@ -1,5 +1,5 @@
 @font-face {font-family: "iconfont";
-  src: url('/static/iconfont.ttf?t=1585316862234') format('truetype'); /* iOS 4.1- */
+  src: url('/static/iconfont.ttf?t=1585380596710') format('truetype'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -8,6 +8,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiahao1:before {
+  content: "\e644";
 }
 
 .icon-youjiantou:before {
