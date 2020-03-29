@@ -4,9 +4,13 @@
 		<view class="time_view">
 			<view class="time_text">配送时间:</view>
 			<view class="time_input_view">
-				<input type="text" class="time_input">
+				<picker mode="date" @change="pickerClick1" @cancel="cancelClick">
+					<view class="time_input">{{beginDate}} </view>
+				</picker>
 				<text>-</text>
-				<input type="text" class="time_input">
+				<picker mode="date" @change="pickerClick2" @cancel="cancelClick">
+					<view class="time_input">{{lastDate}} </view>
+				</picker>
 			</view>
 		</view>
 		<view class="time_view time_view1">
@@ -46,6 +50,11 @@
 		components: {
 			navbar
 		},
+		onReady() {
+			var timestamp = Date.parse(new Date())
+			this.beginDate = this.toolUtil.getTimeStrOnlyDate(timestamp)
+			this.lastDate = this.toolUtil.getTimeStrOnlyDate(timestamp)
+		},
 		data() {
 			return {
 				array: ['1', '2'],
@@ -65,7 +74,9 @@
 						name: 'dd',
 						type: '3'
 					}
-				]
+				],
+				beginDate:'',
+				lastDate:''
 			}
 		},
 		onLoad() {
@@ -73,9 +84,14 @@
 		},
 		methods: {
 			pickerClick(e) {
-				console.log(e)
 				this.arrayText = this.array[e.detail.value]
 			},
+			pickerClick1(e){
+				this.beginDate = e.detail.value
+			},
+			pickerClick2(e){
+				this.lastDate = e.detail.value
+			}
 		}
 	}
 </script>
@@ -117,6 +133,7 @@
 		font-size: 28upx;
 		text-align: center;
 		margin: 0 20upx;
+		line-height: 48upx;
 	}
 
 	.picker {

@@ -1,6 +1,6 @@
 <template>
 	<view class="page">
-		<navbar title="新增菜品" :backcolorType='2' :showKongPanel="1" :whiteback="2"></navbar>
+		<navbar title="新增菜品" :backcolorType='2' :showKongPanel="true" :whiteback="2"></navbar>
 		<view class="img_view">
 			<image class="food_img" src="/static/微信图片_20200318092008.jpg" mode="aspectFill" v-if="img"></image>
 			<span class="iconfont icon-jiahao1"></span>
@@ -8,30 +8,31 @@
 		<view class="big_view">
 			<view class="text_view">
 				<text>菜品名称:</text>
-				<input class="input" type="text" placeholder="请输入菜品名称">
+				<input class="input"  type="text" placeholder="请输入菜品名称" @input="nameInput">
 			</view>
 			<view class="text_view">
 				<text>菜品描述:</text>
-				<input class="input" type="text" placeholder="请输入菜品描述">
+				<input class="input" type="text" placeholder="请输入菜品描述" @input="introInput">
 			</view>
-			<view class="text_view">
+			<view class="text_view" @click="classifyClick">
 				<text>菜品类型:</text>
-				<view class="text_right_view text_right_view1"><span class="iconfont icon-jiantou"></span></view>
+				<view class="text_right_view text_right_view1"><span class="iconfont icon-jiantou"></span><view class="class" v-if="smallType">{{classify[smallType - 1].name}}</view><span class="iconfont icon-zhiding" v-if="smallType&&bigType"></span><view class="class" v-if="bigType">{{classify[bigType - 1].name}}</view></view>
 			</view>
 			<view class="text_view">
 				<text>菜品期限:</text>
 				<view class="text_right_view">
 					<checkbox-group>
 						<label v-for="(item,index) in student" :key='index' @click='checkClick(item.id)'>
-							<checkbox :value="item.id" :checked='item.checked'  style="transform:scale(0.7)" /><text>{{item.name}}</text>
+							<checkbox :value="item.id" :checked='item.checked'  style="transform:scale(0.7)" color="#FFBA59" /><text>{{item.name}}</text>
 						</label>
 					</checkbox-group>
 				</view>
 			</view>
 			<view class="text_view">
 				<text>菜品单价:</text>
-				<input class="input" type="text" placeholder="请输入金额(元)">
+				<input class="input" type="text" placeholder="请输入金额(元)" @input="cashInput" >
 			</view>
+			<view class="btn" @click="comfireClick">完成</view>
 		</view>
 	</view>
 </template>
@@ -57,22 +58,53 @@
 				},
 				{
 					name:'晚餐',
-					id: '2',
+					id: '3',
 					checked:false
 				},
 				{
 					name:'夜宵',
-					id: '2',
+					id: '4',
 					checked:false
 				},
 				],
-				allId:[]
+				allId: [],
+				cashValue: '',
+				introValue: '',
+				nameValue: '',
+				img:'',
+				bigType:'',
+				smallType:'',
+				classify:[]
 			}
 		},
 		onLoad() {
 			
 		},
+		onShow() {
+			console.log(this.classify)
+			console.log(this.bigType)
+			console.log(this.smallType)
+		},
 		methods:{
+			classifyClick(){
+				uni.navigateTo({
+					url:"detailClassifyBig"
+				})
+			},
+			comfireClick(){
+				console.log(111,this.nameValue)
+				console.log(222,this.introValue)
+				console.log(333,this.cashValue)
+			},
+			nameInput(e){
+				this.nameValue = e.detail.value
+			},
+			introInput(e){
+				this.introValue = e.detail.value
+			},
+			cashInput(e){
+				this.cashValue = e.detail.value
+			},
 			commentClick(){
 				uni.navigateTo({
 					url:'comment/comment'
@@ -160,5 +192,29 @@
 	label{
 		width: 50%;
 		text-align: right;
+	}
+	.btn{
+		width: 520upx;
+		height: 78upx;
+		font-size: 32upx;
+		line-height: 78upx;
+		background:linear-gradient(270deg,rgba(249,128,80,1) 1%,rgba(255,186,89,1) 100%);
+		margin: 50upx auto 0;
+		border-radius: 44upx;
+		text-align: center;
+		color: #FFFFFF;
+	}
+	.icon-zhiding{
+		display: inline-block;
+		transform: rotate(90deg);
+	}
+	.class{
+		font-size: 24upx;
+		color: #FFFFFF;
+		background: #FFBA59;
+		padding: 6upx 10upx;
+		border-radius: 24upx;
+		margin: 0 10upx;
+		
 	}
 </style>

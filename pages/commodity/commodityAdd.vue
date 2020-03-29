@@ -27,7 +27,7 @@
 			<view class="bottom_tab" @click="classifyClick">
 				<span class="iconfont icon-fenlei"></span><text>管理分类</text>
 			</view>
-			<view class="bottom_tab">
+			<view class="bottom_tab" @click="addClick">
 				<span class="iconfont icon-xinjian"></span><text>新建商品</text>
 			</view>
 		</view>
@@ -61,6 +61,11 @@
 
 		},
 		methods: {
+			addClick(){
+				uni.navigateTo({
+					url:"administration/addDetail"
+				})
+			},
 			classifyClick(){
 				uni.navigateTo({
 					url:"administration/classify"

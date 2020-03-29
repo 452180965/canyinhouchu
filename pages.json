@@ -89,6 +89,13 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
+	},
+	{
+		"path": "pages/commodity/administration/detailClassifyBig",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
 	}
 	
 	],
