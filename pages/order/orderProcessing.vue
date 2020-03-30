@@ -64,7 +64,7 @@
 			</view>
 		</view>
 		<view class="bottom_tab_view">
-			<view class="bottom_tab">当日订单</view>
+			<view class="bottom_tab" @click="todayClick">当日订单</view>
 			<view class="bottom_tab">预订单</view>
 		</view>
 	</view>
@@ -95,6 +95,11 @@
 			
 		},
 		methods:{
+			todayClick(){
+				uni.navigateTo({
+					url:"orderDetail/todayOrder"
+				})
+			},
 			tabClick(type){
 				if(this.tabType == type){
 					return false
