@@ -234,7 +234,7 @@
 		border-right: 1upx solid #F5F5F5;
 	}
 	.table_view:nth-of-type(2n){
-		background: #C5C5C5;
+		background: #D6D6D6;
 	}
 	.table1{
 		width: 15%;

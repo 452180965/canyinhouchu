@@ -1,5 +1,5 @@
 @font-face {font-family: "iconfont";
-  src: url('/static/iconfont.ttf?t=1585535810350') format('truetype'); /* iOS 4.1- */
+  src: url('/static/iconfont.ttf?t=1585557551603') format('truetype'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -8,6 +8,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiahao:before {
+  content: "\e620";
 }
 
 .icon-dianhua:before {

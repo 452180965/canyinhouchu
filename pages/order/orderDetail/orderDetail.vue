@@ -199,6 +199,6 @@
 	}
 
 	.table:nth-last-of-type(2n) {
-		background: #c5c5c5;
+		background: #D6D6D6;
 	}
 </style>

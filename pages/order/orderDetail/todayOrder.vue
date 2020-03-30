@@ -83,8 +83,8 @@
 		color: #fff;
 		border-radius: 34upx;
 		padding: 10upx 24upx;
+		background: linear-gradient(270deg, rgba(249, 128, 80, 1) 1%, rgba(255, 186, 89, 1) 100%) !important;
 		
-		background:linear-gradient(268deg,rgba(255,55,78,1) 0%,rgba(255,93,55,1) 100%);
 		margin-left: 40upx;
 	}
 
@@ -163,6 +163,6 @@
 	}
 	.order_btn1{
 		color: #FFFFFF;
-		background: linear-gradient(270deg, rgba(249, 128, 80, 1) 1%, rgba(255, 186, 89, 1) 100%) !important;
+		background:linear-gradient(268deg,rgba(255,55,78,1) 0%,rgba(255,93,55,1) 100%);
 	}
 </style>

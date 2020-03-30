@@ -4,9 +4,9 @@
 		<view class="search_view" :style="{top:searchHeight + 'px'}">
 			<view class="search">
 				<span class='iconfont icon-sousuo'></span>
-				<input class="search_input" type="text" value="" placeholder-class="placeholder" placeholder="请输入学号或订单号" />
+				<input class="search_input" type="text" @input="searchInput" value="" placeholder-class="placeholder" placeholder="请输入学号或订单号" />
 			</view>
-			<view class="search_btn">查询</view>
+			<view class="search_btn" @click="searchClick">查询</view>
 		</view>
 		<view class="tab_view" :style='{top:tabHeight +"px"}'>
 			<view class="tab_box">
@@ -88,13 +88,25 @@
 				titles:"今日订单",
 				tabText:['今日订单','明日订单','后日订单'],
 				colorList:['#D6D6D6','#ff8f80','#9eb3ff','#fff560'],
-				colorType:0
+				colorType:0,
+				searchValue:''
 			}
 		},
 		onLoad() {
 			
 		},
 		methods:{
+			searchClick(){
+				if(this.searchValue==''){
+					return false
+				}
+				uni.navigateTo({
+					url:"search/search?value=" + this.searchValue
+				})
+			},
+			searchInput(e){
+				this.searchValue = e.detail.value
+			},
 			todayClick(){
 				uni.navigateTo({
 					url:"orderDetail/todayOrder"
@@ -137,6 +149,7 @@
 		background: #FFFFFF;
 		position: fixed;
 		left: 0;
+		z-index: 999;
 	}
 	.search{
 		display: flex;

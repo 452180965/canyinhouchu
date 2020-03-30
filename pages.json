@@ -96,6 +96,13 @@
 			"navigationBarTitleText": "",
 			"navigationStyle":"custom"
 		}
+	},
+	{
+		"path": "pages/order/search/search",
+		"style": {
+			"navigationBarTitleText": "",
+			"navigationStyle":"custom"
+		}
 	}
 	
 	],

@@ -319,7 +319,7 @@
 		margin: 30upx auto 0;
 		font-size: 28upx;
 		text-align: center;
-		background: #c5c5c5;
+		background: #D6D6D6;
 		line-height: 58upx;
 		border-top-left-radius: 14upx;
 		border-top-right-radius: 14upx;
@@ -330,7 +330,7 @@
 		background: #FFFFFF;
 	}
 	.table_view1:nth-of-type(2n){
-		background: #C5C5C5 !important;
+		background: #D6D6D6 !important;
 	}
 	.table_left_view{
 		width: 20%;
